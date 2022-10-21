@@ -31,3 +31,6 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   pattern = { '*' },
   command = [[match ExtraWhitespace /\s\+$/]]
 })
+
+-- Global clipboard
+vim.opt.clipboard = 'unnamedplus'

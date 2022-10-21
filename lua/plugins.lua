@@ -52,6 +52,18 @@ packer.startup(function(use)
   -- Theme
   use "ayu-theme/ayu-vim"
 
-  -- Languages
+  -- Git
+  use "airblade/vim-gitgutter"
+
+  -- ------------ LANGUAGUES -------------
+  -- Rust
   use "simrat39/rust-tools.nvim"
+  -- Flutter
+  use {
+    "akinsho/flutter-tools.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("config.flutter").setup()
+    end,
+  }
 end)
