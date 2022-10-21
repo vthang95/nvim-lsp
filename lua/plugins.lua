@@ -51,4 +51,7 @@ packer.startup(function(use)
 
   -- Theme
   use "ayu-theme/ayu-vim"
+
+  -- Languages
+  use "simrat39/rust-tools.nvim"
 end)
