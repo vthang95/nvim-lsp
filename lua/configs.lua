@@ -5,6 +5,7 @@ local config = {
   autoread = true,
   autoindent = true,
   foldmethod = 'indent',
+  updatetime = 100,
   foldlevelstart = 99,
   hlsearch = true,
   background = 'dark',

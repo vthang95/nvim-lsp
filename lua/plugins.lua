@@ -27,6 +27,7 @@ packer.startup(function(use)
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "windwp/nvim-ts-autotag" }
+  use 'b3nj5m1n/kommentary'
 
   -- File explorer
   use "kyazdani42/nvim-web-devicons"
@@ -58,10 +59,7 @@ packer.startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
+
   use {
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig"

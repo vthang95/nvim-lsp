@@ -13,8 +13,7 @@ keymap.set('', '<leader>ok', ':noh<CR>')
 keymap.set('', '<C-/>', vim.lsp.buf.hover, {})
 
 -- Quit current buffer
-keymap.set('', '<leader>q', '<Cmd>BufferClose<CR>', {})
--- keymap.set('', '<leader>q', '<C-w>q<CR>', {})
+keymap.set('', '<leader>q', '<C-w>q<CR>', {})
 
 -- Jump to the first non-black character of the line
 keymap.set('', '<', '^')
@@ -55,17 +54,16 @@ keymap.set('', '<leader>\\', ':NvimTreeToggle<CR>')
 -- Tabpane shortcuts
 keymap.set('', '<leader>tn', ':tabnew<CR>')
 
--- keymap.set('n', '<leader>1', '1gt')
-keymap.set('n', '<leader>1', '<Cmd>BufferGoto 1<CR>', opts)
-keymap.set('n', '<leader>2', '<Cmd>BufferGoto 2<CR>', opts)
-keymap.set('n', '<leader>3', '<Cmd>BufferGoto 3<CR>', opts)
-keymap.set('n', '<leader>4', '<Cmd>BufferGoto 4<CR>', opts)
-keymap.set('n', '<leader>5', '<Cmd>BufferGoto 5<CR>', opts)
-keymap.set('n', '<leader>6', '<Cmd>BufferGoto 6<CR>', opts)
-keymap.set('n', '<leader>7', '<Cmd>BufferGoto 7<CR>', opts)
-keymap.set('n', '<leader>8', '<Cmd>BufferGoto 8<CR>', opts)
-keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', opts)
-keymap.set('n', '<leader>0', '<Cmd>BufferLast<CR>', opts)
+keymap.set('n', '<leader>1', '1gt')
+keymap.set('n', '<leader>2', '2gt')
+keymap.set('n', '<leader>3', '3gt')
+keymap.set('n', '<leader>4', '4gt')
+keymap.set('n', '<leader>5', '5gt')
+keymap.set('n', '<leader>6', '6gt')
+keymap.set('n', '<leader>7', '7gt')
+keymap.set('n', '<leader>8', '8gt')
+keymap.set('n', '<leader>9', '9gt')
+keymap.set('n', '<leader>0', ':tablast<CR>')
 
 -- Disable copy when delete
 keymap.set('v', 'd', '"_d')
