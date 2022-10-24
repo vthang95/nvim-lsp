@@ -54,6 +54,18 @@ packer.startup(function(use)
 
   -- Theme
   use "ayu-theme/ayu-vim"
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+  }
 
   -- Git
   use "airblade/vim-gitgutter"
