@@ -51,7 +51,7 @@ require('lualine').setup({
           unnamed = '[No Name]', -- Text to show for unnamed buffers.
           newfile = '[New]',     -- Text to show for new created file before first writting
         }
-      }
+      },
     },
     lualine_c = {
       { navic.get_location, cond = navic.is_available },

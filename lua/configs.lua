@@ -35,3 +35,20 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 
 -- Global clipboard
 vim.opt.clipboard = 'unnamedplus'
+
+-- Use this if you want it to automatically show all diagnostics on the
+-- current line in a floating window. Personally, I find this a bit
+-- distracting and prefer to manually trigger it (see below). The
+-- CursorHold event happens when after `updatetime` milliseconds. The
+-- default is 4000 which is much too long
+
+vim.o.updatetime = 100
+
+-- this is for diagnositcs signs on the line number column
+-- use this to beautify the plain E W signs to more fun ones
+-- !important nerdfonts needs to be setup for this to work in your terminal
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
+end

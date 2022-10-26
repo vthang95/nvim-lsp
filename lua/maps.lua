@@ -75,6 +75,16 @@ keymap.set('n', 'fw', 'dw')
 keymap.set('n', 'dw', '"_dw')
 
 local builtin = require('telescope.builtin')
+
 keymap.set('', '<leader>ff', builtin.find_files, {})
 keymap.set('', '<leader>gf', builtin.git_files, {})
 keymap.set('', '<leader>rg', ':Telescope grep_string search="" only_sort_text=true<CR>', {})
+
+-- Show all diagnostics on current line in floating window
+keymap.set('n', '<leader>e', ':lua vim.diagnostic.open_float()<CR>', opts)
+-- Go to next diagnostic (if there are multiple on the same line, only shows
+-- one at a time in the floating window)
+keymap.set('n', '<leader>n', ':lua vim.diagnostic.goto_next()<CR>', opts)
+-- Go to prev diagnostic (if there are multiple on the same line, only shows
+-- one at a time in the floating window)
+keymap.set('n', '<leader>p', ':lua vim.diagnostic.goto_prev()<CR>', opts)

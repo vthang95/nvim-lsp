@@ -10,10 +10,10 @@ require("mason").setup({
 
 require("mason-lspconfig").setup()
 
-require('lspconfig').tsserver.setup {
+--[[ require('lspconfig').tsserver.setup {
   on_attach = function(client, bufnr)
-    require("nvim-navic").attach(client, bufnr)
+
   end,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
-}
+} ]]
