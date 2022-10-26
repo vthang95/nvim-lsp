@@ -64,6 +64,7 @@ packer.startup(function(use)
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig"
   }
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Git
   use "airblade/vim-gitgutter"

@@ -42,12 +42,9 @@ require('lualine').setup({
   sections = {
     lualine_a = {
       {
-        'mode',
-        show_modified_status = true, -- Shows indicator when the buffer is modified.
-      },
-      {
         'filename',
         file_status = true,
+        path = 1,
         symbols = {
           modified = ' ●',      -- Text to show when the file is modified.
           readonly = '[x]',      -- Text to show when the file is non-modifiable or readonly.
@@ -59,6 +56,7 @@ require('lualine').setup({
     lualine_c = {
       { navic.get_location, cond = navic.is_available },
     },
+    lualine_x = {'filetype'}
   },
   tabline = {
     lualine_b = {
@@ -87,6 +85,6 @@ require('lualine').setup({
     },
     lualine_c = {},
     lualine_d = {},
-  }
+  },
 })
 

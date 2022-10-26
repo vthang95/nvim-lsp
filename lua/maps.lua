@@ -13,7 +13,9 @@ keymap.set('', '<leader>ok', ':noh<CR>')
 keymap.set('', '<C-/>', vim.lsp.buf.hover, {})
 
 -- Quit current buffer
-keymap.set('', '<leader>q', '<C-w>q<CR>', {})
+keymap.set('', '<leader>q', ':bd<CR>', {})
+keymap.set('', '<C-l>', ':bnext<CR>', {})
+keymap.set('', '<C-h>', ':bprevious<CR>', {})
 
 -- Jump to the first non-black character of the line
 keymap.set('', '<', '^')
