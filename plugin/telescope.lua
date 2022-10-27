@@ -1,4 +1,9 @@
 require('telescope').setup({
+  defaults = {
+    live_grep_args = {
+      file_ignore_patterns = {}
+    }
+  },
   extentions = {
     fzf = {
       case_mode = 'smart_case',

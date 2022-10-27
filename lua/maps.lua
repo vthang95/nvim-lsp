@@ -79,6 +79,7 @@ local builtin = require('telescope.builtin')
 keymap.set('', '<leader>ff', builtin.find_files, {})
 keymap.set('', '<leader>gf', builtin.git_files, {})
 keymap.set('', '<leader>rg', ':Telescope grep_string search="" only_sort_text=true<CR>', {})
+keymap.set('', '<leader>hh', ':Telescope oldfiles<CR>', {})
 
 -- Show all diagnostics on current line in floating window
 keymap.set('n', '<leader>e', ':lua vim.diagnostic.open_float()<CR>', opts)
