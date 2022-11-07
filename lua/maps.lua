@@ -10,7 +10,7 @@ vim.g.mapleader = ' '
 
 keymap.set('', '<leader>ok', ':noh<CR>')
 
-keymap.set('', '<C-/>', vim.lsp.buf.hover, {})
+keymap.set('', '<leader>/', vim.lsp.buf.hover, {})
 
 -- Quit current buffer
 keymap.set('', '<leader>q', ':bd<CR>', {})
