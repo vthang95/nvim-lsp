@@ -1,7 +1,7 @@
 require('telescope').setup({
   defaults = {
     live_grep_args = {
-      file_ignore_patterns = {}
+      file_ignore_patterns = { "yarn.lock" }
     }
   },
   extentions = {

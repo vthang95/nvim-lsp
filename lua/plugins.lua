@@ -24,6 +24,9 @@ packer.startup(function(use)
   use { "hrsh7th/vim-vsnip" }
   use { "onsails/lspkind-nvim" }
 
+  -- Formatting, linting
+  use { "jose-elias-alvarez/null-ls.nvim" }
+
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "windwp/nvim-ts-autotag" }
