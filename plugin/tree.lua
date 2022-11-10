@@ -6,6 +6,17 @@ require("nvim-tree").setup {
   filters = {
     custom = { ".cs.meta$" }
   },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = true,
+    debounce_delay = 50,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    }
+  },
   renderer = {
     root_folder_modifier = ":t",
     icons = {
@@ -23,8 +34,8 @@ require("nvim-tree").setup {
           symlink_open = "",
         },
         git = {
-          unstaged = "",
-          staged = "S",
+          unstaged = "",
+          staged = "",
           unmerged = "",
           renamed = "➜",
           untracked = "U",
