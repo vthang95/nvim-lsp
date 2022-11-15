@@ -4,6 +4,7 @@ local config = {
   encoding = 'utf-8',
   autoread = true,
   autoindent = true,
+  smartindent = true,
   foldmethod = 'indent',
   updatetime = 100,
   foldlevelstart = 99,
